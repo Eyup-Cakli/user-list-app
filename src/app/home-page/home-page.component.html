@@ -1,55 +1,56 @@
 <div class="container">
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort (matSortChange)="announceSortChange($event)"
+  class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
+    <!-- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
     <!-- Position Column -->
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> id </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by id"> id </th>
       <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Name </th>
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="email">
-      <th mat-header-cell *matHeaderCellDef> email </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by email"> email </th>
       <td mat-cell *matCellDef="let element"> {{element.email}} </td>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="gender">
-      <th mat-header-cell *matHeaderCellDef> gender </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by gender"> gender </th>
       <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
     </ng-container>
     <!-- Symbol Column -->
     <ng-container matColumnDef="age">
-      <th mat-header-cell *matHeaderCellDef> age </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by age"> age </th>
       <td mat-cell *matCellDef="let element"> {{element.age}} </td>
     </ng-container>
     <!-- Symbol Column -->
     <ng-container matColumnDef="phone">
-      <th mat-header-cell *matHeaderCellDef> phone </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by phone"> phone </th>
       <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
     </ng-container>
     <!-- Symbol Column -->
     <ng-container matColumnDef="companyId">
-      <th mat-header-cell *matHeaderCellDef> companyId </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number"> companyId </th>
       <td mat-cell *matCellDef="let element"> {{element.company.id}} </td>
     </ng-container>
     <!-- Symbol Column -->
     <ng-container matColumnDef="companyName">
-      <th mat-header-cell *matHeaderCellDef> companyName </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by company.name"> companyName </th>
       <td mat-cell *matCellDef="let element"> {{element.company.name}} </td>
     </ng-container>
-    <!-- Symbol Column -->
+     <!-- Symbol Column  -->
     <ng-container matColumnDef="companyLocation">
-      <th mat-header-cell *matHeaderCellDef> companyLocation </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by companyLocation"> companyLocation </th>
       <td mat-cell *matCellDef="let element"> {{element.company.location}} </td>
     </ng-container>
 
